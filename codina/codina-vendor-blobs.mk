@@ -16,7 +16,7 @@ LOCAL_PATH := $(LOCAL_PATH)
 
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES := \
-    $(LOCAL_PATH)/system/lib/libril.so:obj/lib/libril.so
+    $(LOCAL_PATH)/system/lib/libril.so:obj/lib/libsamsung-ril.so
 
 # Camera
 PRODUCT_COPY_FILES += \
@@ -55,7 +55,7 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/libril.so:system/lib/libril.so \
+    $(LOCAL_PATH)/system/lib/libril.so:system/lib/libsamsung-ril.so \
     $(LOCAL_PATH)/system/lib/libsecril-client.so:system/lib/libsecril-client.so \
     $(LOCAL_PATH)/system/lib/libsec-ril.so:system/lib/libsec-ril.so \
     $(LOCAL_PATH)/system/etc/AT/manuf_id.cfg:system/etc/AT/manuf_id.cfg \
