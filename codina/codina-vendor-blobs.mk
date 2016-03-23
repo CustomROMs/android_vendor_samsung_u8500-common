@@ -14,6 +14,10 @@
 
 LOCAL_PATH := $(LOCAL_PATH)
 
+# Prebuilt libraries that are needed to build open-source libraries
+PRODUCT_COPY_FILES := \
+    $(LOCAL_PATH)/system/lib/libril.so:obj/lib/libril.so
+
 # Camera
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/hw/camera.montblanc.so:system/lib/hw/camera.montblanc.so \
@@ -119,7 +123,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/bin/msa:system/bin/msa \
     $(LOCAL_PATH)/system/bin/npsmobex:system/bin/npsmobex \
     $(LOCAL_PATH)/system/bin/orientationd6x:system/bin/orientationd6x \
-    $(LOCAL_PATH)/system/bin/rild:system/bin/rild \
     $(LOCAL_PATH)/system/bin/ta_loader:system/bin/ta_loader
 
 # System STE Libs
