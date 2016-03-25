@@ -32,7 +32,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/egl/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
     $(LOCAL_PATH)/system/lib/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
     $(LOCAL_PATH)/system/lib/libMali.so:system/lib/libMali.so \
-    $(LOCAL_PATH)/system/lib/libUMP.so:system/lib/libUMP.so
+    $(LOCAL_PATH)/system/lib/libUMP.so:system/lib/libUMP-old.so
 
 # Audio
 PRODUCT_COPY_FILES += \
