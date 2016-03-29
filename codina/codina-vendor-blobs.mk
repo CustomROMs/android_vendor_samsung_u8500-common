@@ -16,11 +16,14 @@ LOCAL_PATH := $(LOCAL_PATH)
 
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES := \
-    $(LOCAL_PATH)/system/lib/libril.so:obj/lib/libsamsung-ril.so
+    $(LOCAL_PATH)/system/lib/libril.so:obj/lib/libsamsung-ril.so \
+    $(LOCAL_PATH)/system/lib/libAMP.so:obj/lib/libAMP.so \
+    $(LOCAL_PATH)/system/lib/libcamera_aptina.so:obj/lib/libcamera_aptina.so
+
 
 # Camera
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/hw/camera.montblanc.so:system/lib/hw/camera.montblanc.so \
+    $(LOCAL_PATH)/system/lib/libcamera_aptina.so:system/lib/libcamera_aptina.so \
     $(LOCAL_PATH)/system/usr/share/camera/config_file/aptina_mt9v113.dat:system/usr/share/camera/config_file/aptina_mt9v113.dat \
     $(LOCAL_PATH)/system/usr/share/camera/config_file/samsung_s5k4ecgx.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx.dat \
     $(LOCAL_PATH)/system/usr/share/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat \
@@ -78,8 +81,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/etc/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt
 
 # Display
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/libgralloc_shim01.so:system/lib/libgralloc_shim01.so
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/system/lib/libgralloc_shim01.so:system/lib/libgralloc_shim01.so
 #    $(LOCAL_PATH)/system/lib/hw/hwcomposer.montblanc.so:system/lib/hw/hwcomposer.montblanc.so \
 #    $(LOCAL_PATH)/system/lib/hw/copybit.montblanc.so:system/lib/hw/copybit.montblanc.so
 
