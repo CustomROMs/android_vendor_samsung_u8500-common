@@ -17,7 +17,7 @@ LOCAL_PATH := $(LOCAL_PATH)
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/system/lib/libril.so:obj/lib/libsamsung-ril.so \
-    $(LOCAL_PATH)/system/lib/libAMP.so:obj/lib/libAMP.so \
+    $(LOCAL_PATH)/system/lib/libUMP.so:obj/lib/libUMP-old.so \
     $(LOCAL_PATH)/system/lib/libcamera_aptina.so:obj/lib/libcamera_aptina.so
 
 
@@ -31,6 +31,7 @@ PRODUCT_COPY_FILES += \
 
 # Mali-400
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/system/lib/libUMP.so:system/lib/libUMP-old.so \
     $(LOCAL_PATH)/system/lib/libVGL_mali.so:system/lib/libVGL_mali.so \
     $(LOCAL_PATH)/system/lib/libGLESv1_CM_lima.so:system/lib/libGLESv1_CM_lima.so \
     $(LOCAL_PATH)/system/lib/libGLESv2_lima.so:system/lib/libGLESv2_lima.so \
