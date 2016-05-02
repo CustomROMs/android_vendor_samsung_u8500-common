@@ -36,13 +36,12 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/egl/libEGL_mali.so:system/lib/egl/libEGL_mali.so \
     $(LOCAL_PATH)/system/lib/egl/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
     $(LOCAL_PATH)/system/lib/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
-    $(LOCAL_PATH)/system/lib/libAMP.so:system/lib/libAMP.so
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/hw/audio_policy.montblanc.so:system/lib/hw/audio_policy.montblanc.so \
     $(LOCAL_PATH)/system/lib/hw/audio.primary.montblanc.so:system/lib/hw/audio.primary.montblanc.so \
     $(LOCAL_PATH)/system/lib/libaudiopolicy_sam.so:system/lib/libaudiopolicy_sam.so \
+    $(LOCAL_PATH)/system/lib/libaudiopolicyhal_blob.so:system/lib/libaudiopolicyhal_blob.so \
     $(LOCAL_PATH)/system/lib/libsamsungSoundbooster.so:system/lib/libsamsungSoundbooster.so \
     $(LOCAL_PATH)/system/lib/lib_SamsungRec_V01006.so:system/lib/lib_SamsungRec_V01006.so \
     $(LOCAL_PATH)/system/lib/lib_Samsung_SB_AM_for_ICS_v03008.so:system/lib/lib_Samsung_SB_AM_for_ICS_v03008.so \
