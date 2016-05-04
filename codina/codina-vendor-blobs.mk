@@ -31,14 +31,11 @@ PRODUCT_COPY_FILES += \
 
 # Mali-400
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/libUMP.so:system/lib/libUMP-old.so \
-    $(LOCAL_PATH)/system/lib/libVGL_mali.so:system/lib/libVGL_mali.so \
-    $(LOCAL_PATH)/system/lib/libGLESv1_CM_lima.so:system/lib/libGLESv1_CM_lima.so \
-    $(LOCAL_PATH)/system/lib/libGLESv2_lima.so:system/lib/libGLESv2_lima.so \
     $(LOCAL_PATH)/system/lib/egl/libEGL_mali.so:system/lib/egl/libEGL_mali.so \
     $(LOCAL_PATH)/system/lib/egl/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
     $(LOCAL_PATH)/system/lib/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
-    $(LOCAL_PATH)/system/lib/libAMP.so:system/lib/libAMP.so
+    $(LOCAL_PATH)/system/lib/libMali.so:system/lib/libMali.so \
+    $(LOCAL_PATH)/system/lib/libUMP.so:system/lib/libUMP-old.so
 
 # Audio
 PRODUCT_COPY_FILES += \
