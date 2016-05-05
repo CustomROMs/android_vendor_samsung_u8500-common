@@ -17,7 +17,8 @@ LOCAL_PATH := $(LOCAL_PATH)
 # Prebuilt libraries that are needed to build open-source libraries
 PRODUCT_COPY_FILES := \
     $(LOCAL_PATH)/system/lib/libril.so:obj/lib/libsamsung-ril.so \
-    $(LOCAL_PATH)/system/lib/libUMP.so:obj/lib/libUMP-old.so
+    $(LOCAL_PATH)/system/lib/libUMP.so:obj/lib/libUMP-old.so \
+    $(LOCAL_PATH)/system/lib/libAMP.so:obj/lib/libAMP.so
 
 # Camera
 PRODUCT_COPY_FILES += \
@@ -33,6 +34,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/egl/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
     $(LOCAL_PATH)/system/lib/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
     $(LOCAL_PATH)/system/lib/libMali.so:system/lib/libMali.so \
+    $(LOCAL_PATH)/system/lib/libAMP.so:system/lib/libAMP.so \
     $(LOCAL_PATH)/system/lib/libUMP.so:system/lib/libUMP-old.so
 
 # Audio
