@@ -156,6 +156,7 @@ PRODUCT_COPY_FILES += \
 # OMX
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/libnmftimer.so:system/lib/libnmftimer.so \
+    $(LOCAL_PATH)/system/lib/libstelpcutils.so:system/lib/libstelpcutils.so \
     $(LOCAL_PATH)/system/lib/libstagefrighthw.so:system/lib/libstagefrighthw.so \
     $(LOCAL_PATH)/system/lib/ppp_sterc.so:system/lib/ppp_sterc.so \
     $(LOCAL_PATH)/system/lib/libste_ens_image_tuningdatabase.so:system/lib/libste_ens_image_tuningdatabase.so \
