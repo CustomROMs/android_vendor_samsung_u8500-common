@@ -55,8 +55,6 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/libril.so:system/lib/libsamsung-ril.so \
-    $(LOCAL_PATH)/system/lib/libsecril-client.so:system/lib/libsecril-client-old.so \
     $(LOCAL_PATH)/system/lib/libsec-ril.so:system/lib/libsec-ril.so \
     $(LOCAL_PATH)/system/etc/AT/manuf_id.cfg:system/etc/AT/manuf_id.cfg \
     $(LOCAL_PATH)/system/etc/AT/model_id.cfg:system/etc/AT/model_id.cfg \
@@ -77,7 +75,7 @@ PRODUCT_COPY_FILES += \
 
 # Display
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/hw/gralloc.montblanc.so:system/lib/hw/gralloc.montblanc.so
+#    $(LOCAL_PATH)/system/lib/hw/gralloc.montblanc.so:system/lib/hw/gralloc.montblanc.so
 #    $(LOCAL_PATH)/system/lib/hw/hwcomposer.montblanc.so:system/lib/hw/hwcomposer.montblanc.so \
 #    $(LOCAL_PATH)/system/lib/hw/copybit.montblanc.so:system/lib/hw/copybit.montblanc.so
 
@@ -98,7 +96,6 @@ PRODUCT_COPY_FILES += \
 
 # Sensors modules
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/hw/sensors.montblanc.so:system/lib/hw/sensors.montblanc.so \
     $(LOCAL_PATH)/system/etc/sensors.dat:system/etc/sensors.dat \
     $(LOCAL_PATH)/system/etc/calib.dat:system/etc/calib.dat \
     $(LOCAL_PATH)/system/lib/libacdapi_azi.so:system/lib/libacdapi_azi.so \
@@ -116,7 +113,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/bin/at_core:system/bin/at_core \
     $(LOCAL_PATH)/system/bin/copsdaemon:system/bin/copsdaemon \
-    $(LOCAL_PATH)/system/bin/cspsa-server:system/bin/cspsa-server \
     $(LOCAL_PATH)/system/bin/geomagneticd6x:system/bin/geomagneticd6x \
     $(LOCAL_PATH)/system/bin/immvibed:system/bin/immvibed \
     $(LOCAL_PATH)/system/bin/msa:system/bin/msa \
@@ -129,7 +125,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/libbassapp.so:system/lib/libbassapp.so \
     $(LOCAL_PATH)/system/lib/libcn.so:system/lib/libcn.so \
     $(LOCAL_PATH)/system/lib/libcontrolcsc.so:system/lib/libcontrolcsc.so \
-    $(LOCAL_PATH)/system/lib/libcspsa.so:system/lib/libcspsa.so \
     $(LOCAL_PATH)/system/lib/libfactoryutil.so:system/lib/libfactoryutil.so \
     $(LOCAL_PATH)/system/lib/libisimessage.so:system/lib/libisimessage.so \
     $(LOCAL_PATH)/system/lib/liblos.so:system/lib/liblos.so \
@@ -139,7 +134,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/libmmprobe.so:system/lib/libmmprobe.so \
     $(LOCAL_PATH)/system/lib/libmpl.so:system/lib/libmpl.so \
     $(LOCAL_PATH)/system/lib/libnmfee.so:system/lib/libnmfee.so \
-    $(LOCAL_PATH)/system/lib/libnmf.so:system/lib/libnmf.so \
     $(LOCAL_PATH)/system/lib/libomission_avoidance.so:system/lib/libomission_avoidance.so \
     $(LOCAL_PATH)/system/lib/libphonet.so:system/lib/libphonet.so \
     $(LOCAL_PATH)/system/lib/libpscc.so:system/lib/libpscc.so \
@@ -159,7 +153,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/libste_ens_image_tuningdatabase.so:system/lib/libste_ens_image_tuningdatabase.so \
     $(LOCAL_PATH)/system/lib/libste_ens_video_common.so:system/lib/libste_ens_video_common.so \
     $(LOCAL_PATH)/system/lib/libste_ext_ens_image_common.so:system/lib/libste_ext_ens_image_common.so \
-    $(LOCAL_PATH)/system/lib/libste_omxil-interface.so:system/lib/libste_omxil-interface.so \
     $(LOCAL_PATH)/system/lib/ste_omxcomponents/libste_alsasink.so:system/lib/ste_omxcomponents/libste_alsasink.so \
     $(LOCAL_PATH)/system/lib/ste_omxcomponents/libste_alsasource.so:system/lib/ste_omxcomponents/libste_alsasource.so \
     $(LOCAL_PATH)/system/lib/ste_omxcomponents/libste_audio_mixer.so:system/lib/ste_omxcomponents/libste_audio_mixer.so \
