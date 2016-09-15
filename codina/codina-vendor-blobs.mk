@@ -37,9 +37,7 @@ PRODUCT_COPY_FILES += \
 # Audio
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/hw/audio.primary.montblanc.so:system/lib/hw/audio.primary.montblanc.so \
-    $(LOCAL_PATH)/system/lib/hw/audio_policy.montblanc.so:system/lib/hw/audio_policy.montblanc.so \
     $(LOCAL_PATH)/system/lib/libaudiopolicy_sec.so:system/lib/libaudiopolicy_sec.so \
-    $(LOCAL_PATH)/system/lib/libaudiopolicyhal_blob.so:system/lib/libaudiopolicyhal_blob.so \
     $(LOCAL_PATH)/system/lib/libsamsungSoundbooster.so:system/lib/libsamsungSoundbooster.so \
     $(LOCAL_PATH)/system/lib/lib_SamsungRec_V01006.so:system/lib/lib_SamsungRec_V01006.so \
     $(LOCAL_PATH)/system/lib/lib_Samsung_SB_AM_for_ICS_v03008.so:system/lib/lib_Samsung_SB_AM_for_ICS_v03008.so \
@@ -47,6 +45,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/libsamsungRecord.so:system/lib/libsamsungRecord.so \
     $(LOCAL_PATH)/system/lib/libspeech_proc_customer_plugin.so:system/lib/libspeech_proc_customer_plugin.so \
     $(LOCAL_PATH)/system/lib/libspeech_processing.so:system/lib/libspeech_processing.so \
+    $(LOCAL_PATH)/system/lib/libste_adm.so:system/lib/libste_adm.so \
     $(LOCAL_PATH)/system/lib/libste_audio_hwctrl.so:system/lib/libste_audio_hwctrl.so \
     $(LOCAL_PATH)/system/lib/libste_ens_audio_common.so:system/lib/libste_ens_audio_common.so \
     $(LOCAL_PATH)/system/lib/libste_ens_audio_samplerateconv.so:system/lib/libste_ens_audio_samplerateconv.so \
@@ -111,6 +110,7 @@ PRODUCT_COPY_FILES += \
 
 # System STE binaries
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/system/bin/admsrv:system/bin/admsrv \
     $(LOCAL_PATH)/system/bin/at_core:system/bin/at_core \
     $(LOCAL_PATH)/system/bin/copsdaemon:system/bin/copsdaemon \
     $(LOCAL_PATH)/system/bin/geomagneticd6x:system/bin/geomagneticd6x \
