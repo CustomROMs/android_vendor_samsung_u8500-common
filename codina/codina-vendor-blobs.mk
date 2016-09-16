@@ -14,10 +14,6 @@
 
 LOCAL_PATH := $(LOCAL_PATH)
 
-# Prebuilt libraries that are needed to build open-source libraries
-PRODUCT_COPY_FILES := \
-    $(LOCAL_PATH)/system/lib/libril.so:obj/lib/libsamsung-ril.so \
-
 # Camera
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/hw/camera.montblanc.so:system/lib/hw/camera.montblanc.so \
@@ -54,6 +50,7 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/system/lib/libril.so:system/lib/libsamsung-ril.so \
     $(LOCAL_PATH)/system/lib/libsec-ril.so:system/lib/libsec-ril.so \
     $(LOCAL_PATH)/system/etc/AT/manuf_id.cfg:system/etc/AT/manuf_id.cfg \
     $(LOCAL_PATH)/system/etc/AT/model_id.cfg:system/etc/AT/model_id.cfg \
@@ -95,6 +92,7 @@ PRODUCT_COPY_FILES += \
 
 # Sensors modules
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/system/lib/hw/sensors.montblanc.so:system/lib/hw/sensors.montblanc.so \
     $(LOCAL_PATH)/system/etc/sensors.dat:system/etc/sensors.dat \
     $(LOCAL_PATH)/system/etc/calib.dat:system/etc/calib.dat \
     $(LOCAL_PATH)/system/lib/libacdapi_azi.so:system/lib/libacdapi_azi.so \
