@@ -114,34 +114,23 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/bin/copsdaemon:system/bin/copsdaemon \
     $(LOCAL_PATH)/system/bin/geomagneticd6x:system/bin/geomagneticd6x \
     $(LOCAL_PATH)/system/bin/immvibed:system/bin/immvibed \
-    $(LOCAL_PATH)/system/bin/msa:system/bin/msa \
     $(LOCAL_PATH)/system/bin/npsmobex:system/bin/npsmobex \
     $(LOCAL_PATH)/system/bin/orientationd6x:system/bin/orientationd6x \
     $(LOCAL_PATH)/system/bin/ta_loader:system/bin/ta_loader
 
 # System STE Libs
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/libbassapp.so:system/lib/libbassapp.so \
     $(LOCAL_PATH)/system/lib/libcn.so:system/lib/libcn.so \
     $(LOCAL_PATH)/system/lib/libcontrolcsc.so:system/lib/libcontrolcsc.so \
     $(LOCAL_PATH)/system/lib/libfactoryutil.so:system/lib/libfactoryutil.so \
-    $(LOCAL_PATH)/system/lib/libisimessage.so:system/lib/libisimessage.so \
     $(LOCAL_PATH)/system/lib/liblos.so:system/lib/liblos.so \
-    $(LOCAL_PATH)/system/lib/libmalmon.so:system/lib/libmalmon.so \
     $(LOCAL_PATH)/system/lib/libmalrf.so:system/lib/libmalrf.so \
-    $(LOCAL_PATH)/system/lib/libmalutil.so:system/lib/libmalutil.so \
     $(LOCAL_PATH)/system/lib/libmmprobe.so:system/lib/libmmprobe.so \
-    $(LOCAL_PATH)/system/lib/libmpl.so:system/lib/libmpl.so \
     $(LOCAL_PATH)/system/lib/libnmfee.so:system/lib/libnmfee.so \
     $(LOCAL_PATH)/system/lib/libomission_avoidance.so:system/lib/libomission_avoidance.so \
     $(LOCAL_PATH)/system/lib/libphonet.so:system/lib/libphonet.so \
     $(LOCAL_PATH)/system/lib/libpscc.so:system/lib/libpscc.so \
     $(LOCAL_PATH)/system/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
-    $(LOCAL_PATH)/system/lib/libshmnetlnk.so:system/lib/libshmnetlnk.so \
-    $(LOCAL_PATH)/system/lib/libsms_server.so:system/lib/libsms_server.so \
-    $(LOCAL_PATH)/system/lib/libstecom.so:system/lib/libstecom.so \
-    $(LOCAL_PATH)/system/lib/libsterc.so:system/lib/libsterc.so \
-    $(LOCAL_PATH)/system/lib/libtee.so:system/lib/libtee.so \
     $(LOCAL_PATH)/system/lib/libtrace.so:system/lib/libtrace.so \
     $(LOCAL_PATH)/system/lib/libste_aiq_tools.so:system/lib/libste_aiq_tools.so
 
