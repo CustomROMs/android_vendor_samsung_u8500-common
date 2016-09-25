@@ -123,21 +123,17 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/libcn.so:system/lib/libcn.so \
     $(LOCAL_PATH)/system/lib/libcontrolcsc.so:system/lib/libcontrolcsc.so \
     $(LOCAL_PATH)/system/lib/libfactoryutil.so:system/lib/libfactoryutil.so \
-    $(LOCAL_PATH)/system/lib/liblos.so:system/lib/liblos.so \
     $(LOCAL_PATH)/system/lib/libmalrf.so:system/lib/libmalrf.so \
     $(LOCAL_PATH)/system/lib/libmmprobe.so:system/lib/libmmprobe.so \
-    $(LOCAL_PATH)/system/lib/libnmfee.so:system/lib/libnmfee.so \
     $(LOCAL_PATH)/system/lib/libomission_avoidance.so:system/lib/libomission_avoidance.so \
     $(LOCAL_PATH)/system/lib/libphonet.so:system/lib/libphonet.so \
-    $(LOCAL_PATH)/system/lib/libpscc.so:system/lib/libpscc.so \
     $(LOCAL_PATH)/system/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
-    $(LOCAL_PATH)/system/lib/libtrace.so:system/lib/libtrace.so \
-    $(LOCAL_PATH)/system/lib/libste_aiq_tools.so:system/lib/libste_aiq_tools.so
 
 # OMX
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/system/lib/libste_aiq_tools.so:system/lib/libste_aiq_tools.so \
     $(LOCAL_PATH)/system/lib/libnmftimer.so:system/lib/libnmftimer.so \
-    $(LOCAL_PATH)/system/lib/ppp_sterc.so:system/lib/ppp_sterc.so \
+    $(LOCAL_PATH)/system/lib/libnmfee.so:system/lib/libnmfee.so \
     $(LOCAL_PATH)/system/lib/libste_ens_image_tuningdatabase.so:system/lib/libste_ens_image_tuningdatabase.so \
     $(LOCAL_PATH)/system/lib/libste_ens_video_common.so:system/lib/libste_ens_video_common.so \
     $(LOCAL_PATH)/system/lib/libste_ext_ens_image_common.so:system/lib/libste_ext_ens_image_common.so \
