@@ -62,5 +62,5 @@ sd_oobonly=1
 sd_gpout=0
 
 Btc_params80=0
-Btc_params6 = 10
-Btc_params8=10000 
+Btc_params6=10
+Btc_params8=10000

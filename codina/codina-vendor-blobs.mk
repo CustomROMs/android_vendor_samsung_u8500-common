@@ -14,9 +14,21 @@
 
 LOCAL_PATH := $(LOCAL_PATH)
 
+# kernel 3.1
+DEVICE_ENABLE_KERNEL_3 := true
+# DRM new
+DEVICE_ENABLE_DRM_NEV := true
+# DEVICE_LIBSECRIL_OLD := true
+
 # Prebuilt libraries that are needed to build open-source libraries
+#    $(LOCAL_PATH)/system/lib/libril.so:obj/lib/libril.so
+#PRODUCT_COPY_FILES := \
+#    $(LOCAL_PATH)/system/autoload5/libsamsung-ril.so:obj/lib/libsamsung-ril.so
+
+ifeq ($(DEVICE_LIBSECRIL_OLD),true)
 PRODUCT_COPY_FILES := \
-    $(LOCAL_PATH)/system/lib/libril.so:obj/lib/libsamsung-ril.so \
+    $(LOCAL_PATH)/system/lib/libsecril-client.so:obj/lib/libsecril-client.so
+endif
 
 # Camera
 PRODUCT_COPY_FILES += \
@@ -36,8 +48,10 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/system/lib/hw/audio.primary.montblanc.so:system/lib/hw/audio.primary.montblanc.so
+
+PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/hw/audio_policy.montblanc.so:system/lib/hw/audio_policy.montblanc.so \
-    $(LOCAL_PATH)/system/lib/hw/audio.primary.montblanc.so:system/lib/hw/audio.primary.montblanc.so \
     $(LOCAL_PATH)/system/lib/libaudiopolicy_sec.so:system/lib/libaudiopolicy_sec.so \
     $(LOCAL_PATH)/system/lib/libsamsungSoundbooster.so:system/lib/libsamsungSoundbooster.so \
     $(LOCAL_PATH)/system/lib/lib_SamsungRec_V01006.so:system/lib/lib_SamsungRec_V01006.so \
@@ -54,13 +68,19 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/libste_audio_mixer.so:system/lib/libste_audio_mixer.so
 
 # RIL
+#    $(LOCAL_PATH)/system/lib/libril.so:system/lib/libril.so
+#    $(LOCAL_PATH)/system/bin/rild:system/bin/rild
+#    $(LOCAL_PATH)/system/autoload5/libsamsung-ril.so:system/lib/libsamsung-ril.so
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/libril.so:system/lib/libsamsung-ril.so \
-    $(LOCAL_PATH)/system/lib/libsecril-client.so:system/lib/libsecril-client-old.so \
     $(LOCAL_PATH)/system/lib/libsec-ril.so:system/lib/libsec-ril.so \
     $(LOCAL_PATH)/system/etc/AT/manuf_id.cfg:system/etc/AT/manuf_id.cfg \
     $(LOCAL_PATH)/system/etc/AT/model_id.cfg:system/etc/AT/model_id.cfg \
     $(LOCAL_PATH)/system/etc/AT/system_id.cfg:system/etc/AT/system_id.cfg
+
+ifeq ($(DEVICE_LIBSECRIL_OLD),true)
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/system/lib/libsecril-client.so:system/lib/libsecril-client.so
+endif
 
 # Bluetooth
 PRODUCT_COPY_FILES += \
@@ -76,8 +96,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/etc/wifi/nvram_net.txt:system/etc/wifi/nvram_net.txt
 
 # Display
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/hw/gralloc.montblanc.so:system/lib/hw/gralloc.montblanc.so
+# PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/system/lib/hw/gralloc.montblanc.so:system/lib/hw/gralloc.montblanc.so
+
+# Display
+#PRODUCT_COPY_FILES += \
 #    $(LOCAL_PATH)/system/lib/hw/hwcomposer.montblanc.so:system/lib/hw/hwcomposer.montblanc.so \
 #    $(LOCAL_PATH)/system/lib/hw/copybit.montblanc.so:system/lib/hw/copybit.montblanc.so
 
@@ -89,12 +112,26 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/etc/gps.xml:system/etc/gps.xml \
     $(LOCAL_PATH)/system/lib/hw/gps.montblanc.so:system/lib/hw/gps.montblanc.so
 
-# DRM
+ifeq ($(DEVICE_ENABLE_DRM_NEV),true)
+# DRM new
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/system/vendor/libdrmdecrypt.so:system/lib/libdrmdecrypt.so
+#    $(LOCAL_PATH)/system/vendor/libdrmmtkutil.so:system/vendor/lib/libdrmmtkutil.so
+
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/system/vendor/libwvdrm_L3.so:system/vendor/lib/libwvdrm_L3.so \
+    $(LOCAL_PATH)/system/vendor/libwvm.so:system/vendor/lib/libwvm.so \
+    $(LOCAL_PATH)/system/vendor/libWVStreamControlAPI_L3.so:system/vendor/lib/libWVStreamControlAPI_L3.so \
+    $(LOCAL_PATH)/system/vendor/libdrmwvmplugin.so:system/vendor/lib/drm/libdrmwvmplugin.so \
+    $(LOCAL_PATH)/system/vendor/mediadrm/libwvdrmengine.so:system/vendor/lib/mediadrm/libwvdrmengine.so
+else
+# DRM old
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/drm/libdrmwvmplugin.so:system/lib/drm/libdrmwvmplugin.so \
     $(LOCAL_PATH)/system/lib/libwvdrm_L3.so:system/lib/libwvdrm_L3.so \
     $(LOCAL_PATH)/system/lib/libwvm.so:system/lib/libwvm.so \
     $(LOCAL_PATH)/system/lib/libWVStreamControlAPI_L3.so:system/lib/libWVStreamControlAPI_L3.so
+endif
 
 # Sensors modules
 PRODUCT_COPY_FILES += \
@@ -116,6 +153,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/bin/admsrv:system/bin/admsrv \
     $(LOCAL_PATH)/system/bin/at_core:system/bin/at_core \
+    $(LOCAL_PATH)/system/bin/at_distributor:system/bin/at_distributor \
     $(LOCAL_PATH)/system/bin/copsdaemon:system/bin/copsdaemon \
     $(LOCAL_PATH)/system/bin/cspsa-server:system/bin/cspsa-server \
     $(LOCAL_PATH)/system/bin/geomagneticd6x:system/bin/geomagneticd6x \
@@ -127,6 +165,7 @@ PRODUCT_COPY_FILES += \
 
 # System STE Libs
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/system/lib/libatparser.so:system/lib/libatparser.so \
     $(LOCAL_PATH)/system/lib/libbassapp.so:system/lib/libbassapp.so \
     $(LOCAL_PATH)/system/lib/libcn.so:system/lib/libcn.so \
     $(LOCAL_PATH)/system/lib/libcontrolcsc.so:system/lib/libcontrolcsc.so \
@@ -144,6 +183,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/libomission_avoidance.so:system/lib/libomission_avoidance.so \
     $(LOCAL_PATH)/system/lib/libphonet.so:system/lib/libphonet.so \
     $(LOCAL_PATH)/system/lib/libpscc.so:system/lib/libpscc.so \
+    $(LOCAL_PATH)/system/lib/libexpat.so:system/lib/libexpat.so \
     $(LOCAL_PATH)/system/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
     $(LOCAL_PATH)/system/lib/libshmnetlnk.so:system/lib/libshmnetlnk.so \
     $(LOCAL_PATH)/system/lib/libsms_server.so:system/lib/libsms_server.so \
@@ -156,7 +196,6 @@ PRODUCT_COPY_FILES += \
 # OMX
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/libnmftimer.so:system/lib/libnmftimer.so \
-    $(LOCAL_PATH)/system/lib/libstelpcutils.so:system/lib/libstelpcutils.so \
     $(LOCAL_PATH)/system/lib/libstagefrighthw.so:system/lib/libstagefrighthw.so \
     $(LOCAL_PATH)/system/lib/ppp_sterc.so:system/lib/ppp_sterc.so \
     $(LOCAL_PATH)/system/lib/libste_ens_image_tuningdatabase.so:system/lib/libste_ens_image_tuningdatabase.so \
@@ -557,3 +596,63 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VOIP.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VOIP.txt \
     $(LOCAL_PATH)/system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VT.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_VT.txt \
     $(LOCAL_PATH)/system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_WB.txt:system/etc/LVVEFS_tuning_parameters/Tx_ControlParams_SPEAKER_WB.txt
+
+# apk
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/system/app/incallfix.apk:/system/app/incallfix/incallfix.apk
+
+# KernelSettings
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/system/app/ChronoKernelSettings.apk:/system/app/ChronoKernelSettings/ChronoKernelSettings.apk
+
+ifeq ($(DEVICE_ENABLE_KERNEL_3),true)
+# Init.d scripts for Chrono Kernel 3.
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/system/etc/init.d/00autoload:system/etc/init.d/00autoload \
+    $(LOCAL_PATH)/system/autoload/empty:system/lib/modules/autoload/empty \
+    $(LOCAL_PATH)/system/autoload/10dynamic:system/etc/init.d/10dynamic \
+    $(LOCAL_PATH)/system/autoload/60zram:system/etc/init.d/60zram \
+    $(LOCAL_PATH)/system/autoload/20minfree:system/etc/init.d/20minfree \
+    $(LOCAL_PATH)/system/autoload/65tweaks:system/etc/init.d/65tweaks
+endif
+
+# Ramdisk partition Tool
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/system/scripts/check_ramdisk_partition.sh:install/bin/check_ramdisk_partition.sh \
+    $(LOCAL_PATH)/system/scripts/recovery_install.sh:install/bin/recovery_install.sh \
+    $(LOCAL_PATH)/system/scripts/main.sh:install/bin/main.sh
+
+# recovery partition Tool
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/system/scripts/ramdisk-recovery.cpio:install/bin/recovery.cpio
+
+# toybox 23
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/system/autoload5/toybox:system/bin/toybox
+
+# APP REMOVAL SCRIPT
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/system/addon.d/60-removal.sh:system/addon.d/60-removal.sh
+
+# Fix com.google.android.gms.persistent killing script
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/system/autoload/roguegms:system/etc/init.d/roguegms
+
+# SCRIPT godmode
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/system/autoload/godmode:system/etc/init.d/godmode
+
+# macloader
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/system/autoload5/macloader:system/bin/macloader
+
+# libraries
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/system/lib/libstlport.so:system/lib/libstlport.so
+
+#PRODUCT_COPY_FILES += \
+#    $(LOCAL_PATH)/system/lib/libpower.so:system/lib/libpower.so
+
+# Proprietary latinime lib needed for Keyboard swyping
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/system/lib/libjni_unbundled_latinimegoogle.so:system/lib/libjni_unbundled_latinimegoogle.so
