@@ -121,6 +121,7 @@ PRODUCT_COPY_FILES += \
 # System STE Libs
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/libcn.so:system/lib/libcn.so \
+    $(LOCAL_PATH)/system/lib/liblos.so:system/lib/liblos.so \
     $(LOCAL_PATH)/system/lib/libcontrolcsc.so:system/lib/libcontrolcsc.so \
     $(LOCAL_PATH)/system/lib/libfactoryutil.so:system/lib/libfactoryutil.so \
     $(LOCAL_PATH)/system/lib/libmalrf.so:system/lib/libmalrf.so \
