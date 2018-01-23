@@ -135,7 +135,7 @@ endif
 
 # Sensors modules
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/hw/sensors.montblanc.so:system/vendor/lib/sensors.vendor.montblanc.so \
+    $(LOCAL_PATH)/system/lib/hw/sensors.montblanc.so:system/lib/hw/sensors.montblanc.so \
     $(LOCAL_PATH)/system/etc/sensors.dat:system/etc/sensors.dat \
     $(LOCAL_PATH)/system/etc/calib.dat:system/etc/calib.dat \
     $(LOCAL_PATH)/system/lib/libacdapi_azi.so:system/lib/libacdapi_azi.so \
