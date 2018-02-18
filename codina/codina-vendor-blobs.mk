@@ -104,23 +104,24 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/tee/cops_ta.ssw:system/lib/tee/cops_ta.ssw \
     $(LOCAL_PATH)/system/lib/tee/custom_ta.ssw:system/lib/tee/custom_ta.ssw \
     $(LOCAL_PATH)/system/lib/tee/libbassapp_ssw:system/lib/tee/libbassapp_ssw \
-    $(LOCAL_PATH)/system/lib/tee/smcl_ta_8500bx_secure.ssw:system/lib/tee/smcl_ta_8500bx_secure.ssw \
-    $(LOCAL_PATH)/system/lib/libcops.so:system/lib/libcops.so
+    $(LOCAL_PATH)/system/lib/tee/smcl_ta_8500bx_secure.ssw:system/lib/tee/smcl_ta_8500bx_secure.ssw
 
+    #$(LOCAL_PATH)/system/lib/libcops.so:system/lib/libcops.so
 # System STE binaries
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/bin/admsrv:system/bin/admsrv \
-    $(LOCAL_PATH)/system/bin/at_core:system/bin/at_core \
     $(LOCAL_PATH)/system/bin/copsdaemon:system/bin/copsdaemon \
-    $(LOCAL_PATH)/system/bin/geomagneticd6x:system/bin/geomagneticd6x \
     $(LOCAL_PATH)/system/bin/immvibed:system/bin/immvibed \
     $(LOCAL_PATH)/system/bin/npsmobex:system/bin/npsmobex \
-    $(LOCAL_PATH)/system/bin/orientationd6x:system/bin/orientationd6x \
     $(LOCAL_PATH)/system/bin/ta_loader:system/bin/ta_loader
+
+    #$(LOCAL_PATH)/system/bin/at_core:system/bin/at_core \
+    #$(LOCAL_PATH)/system/lib/libcn.so:system/lib/libcn.so \
+    #$(LOCAL_PATH)/system/bin/geomagneticd6x:system/bin/geomagneticd6x \
+    #$(LOCAL_PATH)/system/bin/orientationd6x:system/bin/orientationd6x \
 
 # System STE Libs
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/libcn.so:system/lib/libcn.so \
     $(LOCAL_PATH)/system/lib/liblos.so:system/lib/liblos.so \
     $(LOCAL_PATH)/system/lib/libcontrolcsc.so:system/lib/libcontrolcsc.so \
     $(LOCAL_PATH)/system/lib/libfactoryutil.so:system/lib/libfactoryutil.so \
