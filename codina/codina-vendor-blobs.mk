@@ -14,6 +14,11 @@
 
 LOCAL_PATH := $(LOCAL_PATH)
 
+# Prebuilt libraries that are needed to build open-source libraries
+PRODUCT_COPY_FILES := \
+    $(LOCAL_PATH)/system/lib/libshmnetlnk.so:obj/lib/libshmnetlnk.so \
+    $(LOCAL_PATH)/system/lib/libtee.so:obj/lib/libtee.so
+
 # Camera
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/hw/camera.montblanc.so:system/lib/hw/camera.montblanc.so \
@@ -130,6 +135,8 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/libomission_avoidance.so:system/lib/libomission_avoidance.so \
     $(LOCAL_PATH)/system/lib/libphonet.so:system/lib/libphonet.so \
     $(LOCAL_PATH)/system/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
+    $(LOCAL_PATH)/system/lib/libshmnetlnk.so:system/lib/libshmnetlnk.so \
+    $(LOCAL_PATH)/system/lib/libtee.so:system/lib/libtee.so
 
 # OMX
 PRODUCT_COPY_FILES += \
