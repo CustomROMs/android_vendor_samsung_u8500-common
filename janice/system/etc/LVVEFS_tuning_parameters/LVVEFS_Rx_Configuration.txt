@@ -1,9 +1,9 @@
-55                                                                                                   // Number of arguments
+59                                                                                                   // Number of arguments
 7                                                                                                    // Version of Parser
 0                                                                                                    // File Type
 
 LVM_MODE_ON                                                                                          // Include Rx Voice Engine Processing
-25                                                                                                   // Number of Audio Profiles
+29                                                                                                   // Number of Audio Profiles
 LVVEFS_ABSOLUTE_PATH                                                                                 // Defintion of the path
 /system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET.txt                                 // Control Parameters 1
 /system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER.txt                                 // Control Parameters 2
@@ -30,6 +30,10 @@ LVVEFS_ABSOLUTE_PATH                                                            
 /system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECOFF_VOIP.txt                        // Control Parameters 23
 /system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_BTNRECON_VOIP.txt                         // Control Parameters 24
 /system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_LOOPBACK.txt                         // Control Parameters 25
+/system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_EXTRA.txt                         // Control Parameters 26
+/system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_EXTRA.txt                         // Control Parameters 27
+/system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_HANDSET_EXTRA_WB.txt                         // Control Parameters 28
+/system/etc/LVVEFS_tuning_parameters/Rx_ControlParams_SPEAKER_EXTRA_WB.txt                         // Control Parameters 29
 
 640                                                                                                  // RxIn FIFO Size
 0                                                                                                    // RxIn FIFO Offset
@@ -48,9 +52,9 @@ LVM_MODE_OFF                                                                    
 1440000                                                                                              // Rx In PCM Saving Buffer Size in samples
 /data/Rx_in.pcm                                                                                      // Rx Dump filename for Rx Input
 
-LVVEFS_PCM_MODE_OFF                                                                                  // Rx In PCM Injection Mode
+0 //LVVEFS_PCM_MODE_OFF                                                                                  // Rx In PCM Injection Mode
 120000                                                                                               // Rx In PCM Injection Buffer Size in samples
-/data/Rx_in_inject.pcm                                                                               // Rx Inject filename for Rx Input
+/data/Fs8000_WhiteNoiseBursts.pcm                                                                    // Rx Inject filename for Rx Input
 
 
 0                                                                                  // Rx Out PCM Saving Mode
