@@ -22,7 +22,6 @@ PRODUCT_COPY_FILES := \
 # Camera
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/hw/camera.montblanc.so:system/lib/hw/camera.montblanc.so \
-    $(LOCAL_PATH)/system/lib/libFFTEm.so:system/lib/libFFTEm.so \
     $(LOCAL_PATH)/system/usr/share/camera/config_file/aptina_mt9v113.dat:system/usr/share/camera/config_file/aptina_mt9v113.dat \
     $(LOCAL_PATH)/system/usr/share/camera/config_file/dongbu_db8131m.dat:system/usr/share/camera/config_file/dongbu_db8131m.dat \
     $(LOCAL_PATH)/system/usr/share/camera/config_file/omnivision_ov5640_pri.dat:system/usr/share/camera/config_file/omnivision_ov5640_pri.dat \
@@ -76,10 +75,8 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/bin/rild:system/bin/rild \
-    $(LOCAL_PATH)/system/lib/libril.so:system/lib/libril.so \
+    $(LOCAL_PATH)/system/lib/libril.so:system/lib/libsamsung-ril.so \
     $(LOCAL_PATH)/system/lib/libsec-ril.so:system/lib/libsec-ril.so \
-    $(LOCAL_PATH)/system/lib/libsecril-client.so:system/lib/libsecril-client.so \
     $(LOCAL_PATH)/system/etc/AT/manuf_id.cfg:system/etc/AT/manuf_id.cfg \
     $(LOCAL_PATH)/system/etc/AT/model_id.cfg:system/etc/AT/model_id.cfg \
     $(LOCAL_PATH)/system/etc/AT/system_id.cfg:system/etc/AT/system_id.cfg
@@ -146,7 +143,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/bin/msa:system/bin/msa \
     $(LOCAL_PATH)/system/bin/npsmobex:system/bin/npsmobex \
     $(LOCAL_PATH)/system/bin/orientationd6x:system/bin/orientationd6x \
-    $(LOCAL_PATH)/system/bin/rild:system/bin/rild \
     $(LOCAL_PATH)/system/bin/ta_loader:system/bin/ta_loader
 
 # System STE Libs
@@ -177,13 +173,11 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/libsterc.so:system/lib/libsterc.so \
     $(LOCAL_PATH)/system/lib/libtee.so:system/lib/libtee.so \
     $(LOCAL_PATH)/system/lib/libtrace.so:system/lib/libtrace.so \
-    $(LOCAL_PATH)/system/lib/libstlport.so:system/lib/libstlport.so \
     $(LOCAL_PATH)/system/lib/libste_aiq_tools.so:system/lib/libste_aiq_tools.so
 
 # OMX
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/libnmftimer.so:system/lib/libnmftimer.so \
-    $(LOCAL_PATH)/system/lib/libstagefrighthw.so:system/lib/libstagefrighthw.so \
     $(LOCAL_PATH)/system/lib/ppp_sterc.so:system/lib/ppp_sterc.so \
     $(LOCAL_PATH)/system/lib/libste_ens_image_tuningdatabase.so:system/lib/libste_ens_image_tuningdatabase.so \
     $(LOCAL_PATH)/system/lib/libste_ens_video_common.so:system/lib/libste_ens_video_common.so \
