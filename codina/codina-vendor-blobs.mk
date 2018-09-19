@@ -23,8 +23,6 @@ DEVICE_ENABLE_DRM_NEV := true
 # DEVICE_LIBSECRIL_OLD := true
 # DEVICE_LIB_RIL_OLD := true
 # DEVICE_LIBSEC_NEW := true
-# Sensors modules HAL
-# DEVICE_SENSOR_MULTI_HAL := true
 
 # Prebuilt libraries that are needed to build open-source libraries
 ifeq ($(DEVICE_LIB_RIL_OLD),true)
@@ -153,21 +151,10 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/libWVStreamControlAPI_L3.so:codina/system/lib/libWVStreamControlAPI_L3.so
 endif
 
-ifeq ($(DEVICE_SENSOR_MULTI_HAL),true)
-# Sensors modules HAL
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/hw/sensors.montblanc.so:codina/system/vendor/lib/sensors.vendor.montblanc.so
-else
-# Sensors modules old
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/hw/sensors.montblanc.so:codina/system/lib/hw/sensors.montblanc.so
-endif
-
 # Sensors modules
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/etc/sensors.dat:codina/system/etc/sensors.dat \
     $(LOCAL_PATH)/system/etc/calib.dat:codina/system/etc/calib.dat \
-    $(LOCAL_PATH)/system/lib/libacdapi_azi.so:codina/system/lib/libacdapi_azi.so \
     $(LOCAL_PATH)/system/etc/param.dat:codina/system/etc/param.dat
 
 # Security Daemon Modem

@@ -119,11 +119,6 @@ PRODUCT_COPY_FILES += \
 
 # Sensors
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/hw/sensors.montblanc.so:janice/system/lib/hw/sensors.montblanc.so \
-    $(LOCAL_PATH)/system/lib/libmllite.so:janice/system/lib/libmllite.so \
-    $(LOCAL_PATH)/system/lib/libmlplatform.so:janice/system/lib/libmlplatform.so \
-    $(LOCAL_PATH)/system/lib/libmpl.so:janice/system/lib/libmpl.so \
-    $(LOCAL_PATH)/system/lib/libmplmpu.so:janice/system/lib/libmplmpu.so \
     $(LOCAL_PATH)/system/etc/calib.dat:janice/system/etc/calib.dat \
     $(LOCAL_PATH)/system/etc/param.dat:janice/system/etc/param.dat \
     $(LOCAL_PATH)/system/etc/sensors.dat:janice/system/etc/sensors.dat
