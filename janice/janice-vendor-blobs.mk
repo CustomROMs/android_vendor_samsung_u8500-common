@@ -20,8 +20,8 @@ LOCAL_PATH := $(LOCAL_PATH)
 #    $(LOCAL_PATH)/system/lib/libsecril-client.so:obj/lib/libsecril-client.so
 
 # Camera
+#    $(LOCAL_PATH)/system/lib/hw/camera.montblanc.so:janice/system/lib/hw/camera.montblanc.so \
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/hw/camera.montblanc.so:janice/system/lib/hw/camera.montblanc.so \
     $(LOCAL_PATH)/system/usr/share/camera/config_file/aptina_mt9v113.dat:janice/system/usr/share/camera/config_file/aptina_mt9v113.dat \
     $(LOCAL_PATH)/system/usr/share/camera/config_file/dongbu_db8131m.dat:janice/system/usr/share/camera/config_file/dongbu_db8131m.dat \
     $(LOCAL_PATH)/system/usr/share/camera/config_file/omnivision_ov5640_pri.dat:janice/system/usr/share/camera/config_file/omnivision_ov5640_pri.dat \
