@@ -12,11 +12,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq ($(PRODUCT_DEVICE),codina)
+#ifeq ($(PRODUCT_DEVICE),codina)
 $(call inherit-product, vendor/samsung/u8500-common/codina/codina-vendor-blobs.mk)
-endif
+#endif
 
-ifeq ($(PRODUCT_DEVICE),janice)
+#ifeq ($(PRODUCT_DEVICE),janice)
 $(call inherit-product, vendor/samsung/u8500-common/janice/janice-vendor-blobs.mk)
-endif
+#endif
 

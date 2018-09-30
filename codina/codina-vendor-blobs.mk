@@ -36,8 +36,8 @@ PRODUCT_COPY_FILES := \
 endif
 
 # Camera
-#    $(LOCAL_PATH)/system/lib/hw/camera.montblanc.so:codina/system/lib/hw/camera.montblanc.so \
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/system/lib/hw/camera.montblanc.so:codina/system/lib/hw/camera.montblanc.so \
     $(LOCAL_PATH)/system/usr/share/camera/config_file/aptina_mt9v113.dat:codina/system/usr/share/camera/config_file/aptina_mt9v113.dat \
     $(LOCAL_PATH)/system/usr/share/camera/config_file/samsung_s5k4ecgx.dat:codina/system/usr/share/camera/config_file/samsung_s5k4ecgx.dat \
     $(LOCAL_PATH)/system/usr/share/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat:codina/system/usr/share/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat \
