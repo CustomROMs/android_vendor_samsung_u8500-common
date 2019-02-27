@@ -12,9 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq ($(PRODUCT_DEVICE),janice)
-$(call inherit-product, vendor/samsung/u8500-common/janice/janice-vendor-blobs.mk)
-endif
+
+$(call inherit-product, vendor/samsung/u8500-common/common/common-vendor-blobs.mk)
+
+#ifeq ($(PRODUCT_DEVICE),janice)
+#$(call inherit-product, vendor/samsung/u8500-common/janice/janice-vendor-blobs.mk)
+#endif
 ifeq ($(PRODUCT_DEVICE),janicep)
 $(call inherit-product, vendor/samsung/u8500-common/janice/janicep-vendor-blobs.mk)
 endif
