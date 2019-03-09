@@ -136,7 +136,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/bin/admsrv:system/bin/admsrv \
     $(LOCAL_PATH)/system/bin/at_core:system/bin/at_core \
-    $(LOCAL_PATH)/system/bin/at_distributor:system/bin/at_distributor \
     $(LOCAL_PATH)/system/bin/copsdaemon:system/bin/copsdaemon \
     $(LOCAL_PATH)/system/bin/cspsa-server:system/bin/cspsa-server \
     $(LOCAL_PATH)/system/bin/geomagneticd6x:system/bin/geomagneticd6x \
