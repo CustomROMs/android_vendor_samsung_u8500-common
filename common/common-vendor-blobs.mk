@@ -21,7 +21,6 @@ PRODUCT_COPY_FILES := \
 
 # Camera
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/hw/camera.montblanc.so:system/lib/hw/camera.montblanc.so \
     $(LOCAL_PATH)/system/usr/share/camera/config_file/aptina_mt9v113.dat:system/usr/share/camera/config_file/aptina_mt9v113.dat \
     $(LOCAL_PATH)/system/usr/share/camera/config_file/dongbu_db8131m.dat:system/usr/share/camera/config_file/dongbu_db8131m.dat \
     $(LOCAL_PATH)/system/usr/share/camera/config_file/omnivision_ov5640_pri.dat:system/usr/share/camera/config_file/omnivision_ov5640_pri.dat \
@@ -168,6 +167,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/libphonet.so:system/lib/libphonet.so \
     $(LOCAL_PATH)/system/lib/libpscc.so:system/lib/libpscc.so \
     $(LOCAL_PATH)/system/lib/libsecnativefeature.so:system/lib/libsecnativefeature.so \
+    $(LOCAL_PATH)/system/lib/libshmnetlnk.so:obj/lib/libshmnetlnk.so \
     $(LOCAL_PATH)/system/lib/libshmnetlnk.so:system/lib/libshmnetlnk.so \
     $(LOCAL_PATH)/system/lib/libsms_server.so:system/lib/libsms_server.so \
     $(LOCAL_PATH)/system/lib/libstecom.so:system/lib/libstecom.so \
