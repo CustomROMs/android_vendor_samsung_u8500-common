@@ -23,17 +23,6 @@ DEVICE_ENABLE_DRM_NEV := true
 # DEVICE_LIBSECRIL_OLD := true
 # DEVICE_LIB_RIL_OLD := true
 
-# Prebuilt libraries that are needed to build open-source libraries
-ifeq ($(DEVICE_LIB_RIL_OLD),true)
-PRODUCT_COPY_FILES := \
-    $(LOCAL_PATH)/system/lib/libril.so:obj/lib/libril.so
-endif
-
-ifeq ($(DEVICE_LIBSECRIL_OLD),true)
-PRODUCT_COPY_FILES := \
-    $(LOCAL_PATH)/system/lib/libsecril-client.so:obj/lib/libsecril-client.so
-endif
-
 # Camera
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/hw/camera.montblanc.so:system/lib/hw/camera.montblanc.so \
