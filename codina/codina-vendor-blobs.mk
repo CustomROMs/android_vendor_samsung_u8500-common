@@ -54,6 +54,7 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/system/lib/libste_audio_hwctrl.so:system/lib/libste_audio_hwctrl.so \
     $(LOCAL_PATH)/system/lib/libste_ens_audio_common.so:system/lib/libste_ens_audio_common.so \
     $(LOCAL_PATH)/system/lib/libste_ens_audio_samplerateconv.so:system/lib/libste_ens_audio_samplerateconv.so \
+    $(LOCAL_PATH)/system/lib/libste_ensloader.so:obj/lib/libste_ensloader.so \
     $(LOCAL_PATH)/system/lib/libste_ensloader.so:system/lib/libste_ensloader.so \
     $(LOCAL_PATH)/system/lib/libste_audio_mixer.so:system/lib/libste_audio_mixer.so
 
