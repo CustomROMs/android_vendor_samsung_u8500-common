@@ -40,7 +40,6 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/hw/audio.primary_vendor.montblanc.so:system/lib/hw/audio.primary_vendor.montblanc.so \
     $(LOCAL_PATH)/system/lib/libsamsungSoundbooster.so:system/lib/libsamsungSoundbooster.so \
     $(LOCAL_PATH)/system/lib/lib_SamsungRec_V01006.so:system/lib/lib_SamsungRec_V01006.so \
     $(LOCAL_PATH)/system/lib/lib_Samsung_SB_AM_for_ICS_v03008.so:system/lib/lib_Samsung_SB_AM_for_ICS_v03008.so \
