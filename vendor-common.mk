@@ -12,6 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+$(call inherit-product, vendor/samsung/u8500-common/common/common-vendor-blobs.mk)
+
 ifeq ($(PRODUCT_DEVICE),codina)
 $(call inherit-product, vendor/samsung/u8500-common/codina/codina-vendor-blobs.mk)
 endif
