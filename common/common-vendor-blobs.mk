@@ -24,6 +24,8 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/system/lib/hw/audio_policy.montblanc.so:system/lib/hw/audio_policy.montblanc.so \
+    $(LOCAL_PATH)/system/lib/hw/audio.primary.montblanc.so:system/lib/hw/audio.primary.montblanc.so \
     $(COMMON_PATH)/system/bin/admsrv:system/bin/admsrv \
     $(COMMON_PATH)/system/lib/libste_adm.so:system/lib/libste_adm.so \
     $(COMMON_PATH)/system/lib/libsamsungSoundbooster.so:system/lib/libsamsungSoundbooster.so \
