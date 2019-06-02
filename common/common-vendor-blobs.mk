@@ -111,8 +111,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/system/lib/libstecom.so:system/lib/libstecom.so \
     $(COMMON_PATH)/system/lib/libsterc.so:system/lib/libsterc.so \
     $(COMMON_PATH)/system/lib/libtee.so:system/lib/libtee.so \
-    $(COMMON_PATH)/system/lib/libtrace.so:system/lib/libtrace.so \
-    $(COMMON_PATH)/system/lib/libste_aiq_tools.so:system/lib/libste_aiq_tools.so
+    $(COMMON_PATH)/system/lib/libtrace.so:system/lib/libtrace.so
 
 # OMX
 PRODUCT_COPY_FILES += \
