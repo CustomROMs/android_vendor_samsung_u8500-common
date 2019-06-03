@@ -16,31 +16,32 @@ LOCAL_PATH := $(LOCAL_PATH)
 
 # Camera
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/usr/share/camera/config_file/aptina_mt9v113.dat:system/usr/share/camera/config_file/aptina_mt9v113.dat \
-    $(LOCAL_PATH)/system/usr/share/camera/config_file/samsung_s5k4ecgx.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx.dat \
-    $(LOCAL_PATH)/system/usr/share/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat:system/usr/share/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat \
-    $(LOCAL_PATH)/system/usr/share/camera/config_file/siliconfile_sr030pc50.dat:system/usr/share/camera/config_file/siliconfile_sr030pc50.dat
+    $(LOCAL_PATH)/system/lib/ste_omxcomponents/libste_ext_camera.so:install/codina/system/lib/ste_omxcomponents/libste_ext_camera.so \
+    $(LOCAL_PATH)/system/usr/share/camera/config_file/aptina_mt9v113.dat:install/codina/system/usr/share/camera/config_file/aptina_mt9v113.dat \
+    $(LOCAL_PATH)/system/usr/share/camera/config_file/samsung_s5k4ecgx.dat:install/codina/system/usr/share/camera/config_file/samsung_s5k4ecgx.dat \
+    $(LOCAL_PATH)/system/usr/share/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat:install/codina/system/usr/share/camera/config_file/samsung_s5k4ecgx_codina_liteon.dat \
+    $(LOCAL_PATH)/system/usr/share/camera/config_file/siliconfile_sr030pc50.dat:install/codina/system/usr/share/camera/config_file/siliconfile_sr030pc50.dat
 
 # GPS
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/bin/gps.cer:system/bin/gps.cer \
-    $(LOCAL_PATH)/system/bin/gpsd:system/bin/gpsd \
-    $(LOCAL_PATH)/system/etc/AGPS_CA.pem:system/etc/AGPS_CA.pem \
-    $(LOCAL_PATH)/system/etc/gps.xml:system/etc/gps.xml \
-    $(LOCAL_PATH)/system/lib/hw/gps.montblanc.so:system/lib/hw/gps.montblanc.so
+    $(LOCAL_PATH)/system/bin/gps.cer:install/codina/system/bin/gps.cer \
+    $(LOCAL_PATH)/system/bin/gpsd:install/codina/system/bin/gpsd \
+    $(LOCAL_PATH)/system/etc/AGPS_CA.pem:install/codina/system/etc/AGPS_CA.pem \
+    $(LOCAL_PATH)/system/etc/gps.xml:install/codina/system/etc/gps.xml \
+    $(LOCAL_PATH)/system/lib/hw/gps.montblanc.so:install/codina/system/lib/hw/gps.montblanc.so
 
 # Sensors modules
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/hw/sensors.montblanc.so:system/lib/hw/sensors.montblanc.so \
-    $(LOCAL_PATH)/system/etc/sensors.dat:system/etc/sensors.dat \
-    $(LOCAL_PATH)/system/etc/calib.dat:system/etc/calib.dat \
-    $(LOCAL_PATH)/system/lib/libacdapi_azi.so:system/lib/libacdapi_azi.so \
-    $(LOCAL_PATH)/system/etc/param.dat:system/etc/param.dat
+    $(LOCAL_PATH)/system/lib/hw/sensors.montblanc.so:install/codina/system/lib/hw/sensors.montblanc.so \
+    $(LOCAL_PATH)/system/etc/sensors.dat:install/codina/system/etc/sensors.dat \
+    $(LOCAL_PATH)/system/etc/calib.dat:install/codina/system/etc/calib.dat \
+    $(LOCAL_PATH)/system/lib/libacdapi_azi.so:install/codina/system/lib/libacdapi_azi.so \
+    $(LOCAL_PATH)/system/etc/param.dat:install/codina/system/etc/param.dat
 
 # Security Daemon Modem
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/system/lib/tee/cops_ta.ssw:system/lib/tee/cops_ta.ssw \
-    $(LOCAL_PATH)/system/lib/tee/custom_ta.ssw:system/lib/tee/custom_ta.ssw \
-    $(LOCAL_PATH)/system/lib/tee/libbassapp_ssw:system/lib/tee/libbassapp_ssw \
-    $(LOCAL_PATH)/system/lib/tee/smcl_ta_8500bx_secure.ssw:system/lib/tee/smcl_ta_8500bx_secure.ssw \
-    $(LOCAL_PATH)/system/lib/libcops.so:system/lib/libcops.so
+    $(LOCAL_PATH)/system/lib/tee/cops_ta.ssw:install/codina/system/lib/tee/cops_ta.ssw \
+    $(LOCAL_PATH)/system/lib/tee/custom_ta.ssw:install/codina/system/lib/tee/custom_ta.ssw \
+    $(LOCAL_PATH)/system/lib/tee/libbassapp_ssw:install/codina/system/lib/tee/libbassapp_ssw \
+    $(LOCAL_PATH)/system/lib/tee/smcl_ta_8500bx_secure.ssw:install/codina/system/lib/tee/smcl_ta_8500bx_secure.ssw \
+    $(LOCAL_PATH)/system/lib/libcops.so:install/codina/system/lib/libcops.so

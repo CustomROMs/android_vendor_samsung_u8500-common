@@ -145,7 +145,6 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/system/lib/ste_omxcomponents/libste_enc_jpeg.so:system/lib/ste_omxcomponents/libste_enc_jpeg.so \
     $(COMMON_PATH)/system/lib/ste_omxcomponents/libste_enc_mpeg4.so:system/lib/ste_omxcomponents/libste_enc_mpeg4.so \
     $(COMMON_PATH)/system/lib/ste_omxcomponents/libste_exif_mixer.so:system/lib/ste_omxcomponents/libste_exif_mixer.so \
-    $(COMMON_PATH)/system/lib/ste_omxcomponents/libste_ext_camera.so:system/lib/ste_omxcomponents/libste_ext_camera.so \
     $(COMMON_PATH)/system/lib/ste_omxcomponents/libste_mdrc.so:system/lib/ste_omxcomponents/libste_mdrc.so \
     $(COMMON_PATH)/system/lib/ste_omxcomponents/libste_noise_reduction.so:system/lib/ste_omxcomponents/libste_noise_reduction.so \
     $(COMMON_PATH)/system/lib/ste_omxcomponents/libste_pcm_splitter.so:system/lib/ste_omxcomponents/libste_pcm_splitter.so \
@@ -531,7 +530,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/system/etc/init.d/00autoload:system/etc/init.d/00autoload \
     $(COMMON_PATH)/system/autoload/empty:system/lib/modules/autoload/empty \
-    $(COMMON_PATH)/system/autoload/10dynamic:system/etc/init.d/10dynamic \
     $(COMMON_PATH)/system/autoload/60zram:system/etc/init.d/60zram \
     $(COMMON_PATH)/system/autoload/20minfree:system/etc/init.d/20minfree \
     $(COMMON_PATH)/system/autoload/65tweaks:system/etc/init.d/65tweaks
