@@ -19,8 +19,7 @@ PRODUCT_COPY_FILES += \
     $(COMMON_PATH)/system/lib/egl/libEGL_mali.so:system/lib/egl/libEGL_mali.so \
     $(COMMON_PATH)/system/lib/egl/libGLESv1_CM_mali.so:system/lib/egl/libGLESv1_CM_mali.so \
     $(COMMON_PATH)/system/lib/egl/libGLESv2_mali.so:system/lib/egl/libGLESv2_mali.so \
-    $(COMMON_PATH)/system/lib/libMali.so:system/lib/libMali.so \
-    $(COMMON_PATH)/system/lib/libUMP.so:system/lib/libUMP.so
+    $(COMMON_PATH)/system/lib/libMali.so:system/lib/libMali.so
 
 # Audio
 PRODUCT_COPY_FILES += \
